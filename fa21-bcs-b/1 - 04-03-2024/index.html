@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .error{
-            border:3px solid red;
-        }
+      .error {
+        border: 3px solid red;
+      }
     </style>
     <script>
-        // all code written outside of any function gets executed at the start
-        console.log("Hello from script tag");
-        function handleFormSubmission(){
-            console.log(e);
-            console.log("inside handleFormSubmission");
-            let search = document.getElementById("search");
-            if(search.value) {
-                console.log("Form is valid");
-            }else {
-                console.log("form is not valid");
-                let wrapper= document.getElementById("formWrapper");
-                wrapper.classList.add("error");
-            }
+      // all code written outside of any function gets executed at the start
+      console.log("Hello from script tag");
+      function handleFormSubmission(e) {
+        console.log(e);
+        console.log("inside handleFormSubmission");
+        let search = document.getElementById("search");
+        if (search.value) {
+          console.log("Form is valid");
+        } else {
+          console.log("form is not valid");
+          search.classList.add("error");
         }
-        // handleFormSubmission();
+      }
+      // handleFormSubmission();
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- <form action="https://google.com/search"> -->
-        <div id="formWrapper" class="">
-            <input type="text" id="search" name="q1" placeholder="Start Typing ..."/>
-            <input type="submit" onclick="handleFormSubmission()">
-        </div>
+    <div id="formWrapper" class="">
+      <input type="text" id="search" name="q1" placeholder="Start Typing ..." />
+      <input type="submit" onclick="handleFormSubmission()" />
+    </div>
     <!-- </form> -->
-</body>
+  </body>
 </html>
